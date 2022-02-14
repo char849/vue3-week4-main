@@ -87,7 +87,7 @@
           <div class="modal-content border-0">
             <div class="modal-header bg-dark text-white">
               <h5 id="productModalLabel" class="modal-title">
-                <span>{{isNew ? '新增' : '修改'}}新增產品</span>                
+                <span>{{isNew ? '新增' : '修改'}}產品</span>                
               </h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -116,7 +116,7 @@
                         </button>                                         
                     </template>                       
                       <!-- 如果陣列都沒有填文字內容 or 如果最後一個陣列有內容，新增一個 -->
-                      <button v-else="!tempProduct.imagesUrl.length || tempProduct.imagesUrl[tempProduct.imagesUrl.length - 1]" type="button" class="btn btn-outline-primary btn-sm d-block w-100"
+                      <button v-if="!tempProduct.imagesUrl.length || tempProduct.imagesUrl[tempProduct.imagesUrl.length - 1]" type="button" class="btn btn-outline-primary btn-sm d-block w-100"
                         @click="tempProduct.imagesUrl.push('')">
                         新增一張圖片
                       </button>     
